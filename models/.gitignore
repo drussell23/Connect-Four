@@ -1,0 +1,169 @@
+# 🧠 INTELLIGENT MODEL FILE MANAGEMENT
+# =====================================
+# Smart gitignore for model directory with production/development separation
+
+# =============================================================================
+# TRAINING SNAPSHOTS (Excluded - Too many, change frequently)
+# =============================================================================
+# Fine-tuned training snapshots (usually generated automatically)
+fine_tuned_*.pt
+fine_tuned_*.pth
+
+# Checkpoint files from training
+checkpoint_*.pt
+checkpoint_*.pth
+ckpt_*.pt
+ckpt_*.pth
+
+# Epoch-based snapshots
+epoch_*.pt
+epoch_*.pth
+
+# Step-based snapshots  
+step_*.pt
+step_*.pth
+
+# Temporary training files
+temp_*.pt
+temp_*.pth
+tmp_*.pt
+tmp_*.pth
+
+# =============================================================================
+# DEVELOPMENT & EXPERIMENT FILES (Excluded)
+# =============================================================================
+# Development models (not production ready)
+*_dev.pt
+*_dev.pth
+*_development.pt
+*_development.pth
+
+# Experimental models
+*_exp.pt
+*_exp.pth
+*_experiment.pt
+*_experiment.pth
+
+# Test models
+*_test.pt
+*_test.pth
+*_testing.pt
+*_testing.pth
+
+# Debug models
+*_debug.pt
+*_debug.pth
+
+# Backup models (use external backup instead)
+*_backup.pt
+*_backup.pth
+backup_*.pt
+backup_*.pth
+
+# =============================================================================
+# LARGE DATASETS (Excluded - Use external storage)
+# =============================================================================
+# Training datasets
+datasets/
+training_data/
+train_*.pkl
+train_*.csv
+train_*.parquet
+
+# Preprocessed data
+processed_*.pkl
+preprocessed_*.pkl
+
+# Cache files
+cache_*.pkl
+*.cache
+
+# =============================================================================
+# PRODUCTION MODELS (Included - Important for deployment)
+# =============================================================================
+# Force include production models (override patterns above)
+!best_*.pt
+!best_*.pth
+!current_*.pt
+!current_*.pth
+!production_*.pt
+!production_*.pth
+!release_*.pt
+!release_*.pth
+
+# Specific important models
+!best_policy_net.pt
+!current_policy_net.pt
+
+# =============================================================================
+# DOCUMENTATION & METADATA (Included)
+# =============================================================================
+# Model metadata and documentation
+!*.md
+!*.json
+!*.yaml
+!*.yml
+!*.txt
+
+# Model configuration files
+!*_config.json
+!*_config.yaml
+!model_info.json
+
+# =============================================================================
+# TEMPORARY & BUILD FILES (Excluded)
+# =============================================================================
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# =============================================================================
+# LOGS & OUTPUTS (Excluded - Use logs/ directory instead)
+# =============================================================================
+# Training logs
+*.log
+training_*.log
+validation_*.log
+
+# Tensorboard logs
+runs/
+tb_logs/
+tensorboard/
+
+# Model outputs
+outputs/
+results/
+
+# =============================================================================
+# USAGE EXAMPLES:
+# =============================================================================
+# 
+# ✅ WILL BE TRACKED (Important models):
+#   - best_policy_net.pt
+#   - current_policy_net.pt  
+#   - production_model_v2.pt
+#   - model_config.json
+#   - README.md
+#
+# ❌ WILL BE IGNORED (Temporary/training files):
+#   - fine_tuned_20250712T123456Z.pt
+#   - checkpoint_epoch_100.pt
+#   - experimental_model_dev.pt
+#   - training_data.pkl
+#   - debug_model_test.pt
+#
+# ============================================================================= 

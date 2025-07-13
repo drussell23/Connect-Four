@@ -2,22 +2,18 @@
 # ===================================================
 # Controls how Git handles different file types
 # Ensures consistent line endings, language detection, and merge strategies
-
 # -----------------------------------------------------------------------------
 # 🔄 LINE ENDING NORMALIZATION
 # -----------------------------------------------------------------------------
 # Ensure consistent line endings across platforms
 * text=auto eol=lf
-
 # Force specific line endings for shell scripts (must be LF for Unix/macOS)
 *.sh text eol=lf
 *.bash text eol=lf
 *.zsh text eol=lf
-
 # Windows batch files (must be CRLF)
 *.bat text eol=crlf
 *.cmd text eol=crlf
-
 # -----------------------------------------------------------------------------
 # 📝 TEXT FILES (Language Detection & Formatting)
 # -----------------------------------------------------------------------------
@@ -28,12 +24,10 @@
 *.jsx text linguist-language=JavaScript
 *.mjs text linguist-language=JavaScript
 *.cjs text linguist-language=JavaScript
-
 # JSON files
 *.json text linguist-language=JSON
 *.jsonc text linguist-language=JSON
 *.json5 text linguist-language=JSON
-
 # Python files
 *.py text linguist-language=Python
 *.pyx text linguist-language=Python
@@ -41,7 +35,6 @@
 *.pxi text linguist-language=Python
 *.py3 text linguist-language=Python
 *.pyw text linguist-language=Python
-
 # Configuration files
 *.yml text linguist-language=YAML
 *.yaml text linguist-language=YAML
@@ -50,7 +43,6 @@
 *.cfg text linguist-language=INI
 *.conf text linguist-language=INI
 *.config text linguist-language=INI
-
 # Web files
 *.html text linguist-language=HTML
 *.htm text linguist-language=HTML
@@ -58,25 +50,21 @@
 *.scss text linguist-language=SCSS
 *.sass text linguist-language=Sass
 *.less text linguist-language=Less
-
 # Markdown and documentation
 *.md text linguist-language=Markdown
 *.markdown text linguist-language=Markdown
 *.mdx text linguist-language=Markdown
 *.rst text linguist-language=reStructuredText
 *.txt text
-
 # Shell and scripts
 *.sh text linguist-language=Shell
 *.bash text linguist-language=Shell
 *.zsh text linguist-language=Shell
 *.fish text linguist-language=Shell
-
 # Docker
 Dockerfile text linguist-language=Dockerfile
 *.dockerfile text linguist-language=Dockerfile
 .dockerignore text
-
 # Environment and config
 .env* text
 .gitignore text
@@ -85,7 +73,6 @@ Dockerfile text linguist-language=Dockerfile
 .prettierrc text
 .eslintrc* text
 tsconfig*.json text linguist-language=JSON
-
 # License and README files
 LICENSE text
 COPYING text
@@ -95,7 +82,6 @@ HISTORY* text
 NEWS* text
 AUTHORS* text
 CONTRIBUTORS* text
-
 # -----------------------------------------------------------------------------
 # 🚫 BINARY FILES (No text processing)
 # -----------------------------------------------------------------------------
@@ -109,7 +95,6 @@ CONTRIBUTORS* text
 *.webp binary
 *.bmp binary
 *.tiff binary
-
 # Audio/Video
 *.mp3 binary
 *.mp4 binary
@@ -119,7 +104,6 @@ CONTRIBUTORS* text
 *.flac binary
 *.ogg binary
 *.webm binary
-
 # Archives
 *.zip binary
 *.tar binary
@@ -128,14 +112,12 @@ CONTRIBUTORS* text
 *.xz binary
 *.7z binary
 *.rar binary
-
 # Fonts
 *.woff binary
 *.woff2 binary
 *.ttf binary
 *.otf binary
 *.eot binary
-
 # Documents
 *.pdf binary
 *.doc binary
@@ -144,14 +126,12 @@ CONTRIBUTORS* text
 *.xlsx binary
 *.ppt binary
 *.pptx binary
-
 # Executables
 *.exe binary
 *.dll binary
 *.so binary
 *.dylib binary
 *.app binary
-
 # -----------------------------------------------------------------------------
 # 🧠 MACHINE LEARNING FILES (Git LFS)
 # -----------------------------------------------------------------------------
@@ -159,32 +139,25 @@ CONTRIBUTORS* text
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 *.ckpt filter=lfs diff=lfs merge=lfs -text
-
 # TensorFlow models
 *.h5 filter=lfs diff=lfs merge=lfs -text
 *.pb filter=lfs diff=lfs merge=lfs -text
 *.tflite filter=lfs diff=lfs merge=lfs -text
-
 # ONNX models
 *.onnx filter=lfs diff=lfs merge=lfs -text
-
 # Pickle files (data/models)
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.pickle filter=lfs diff=lfs merge=lfs -text
-
 # Large datasets
 *.csv filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
 *.hdf5 filter=lfs diff=lfs merge=lfs -text
-
 # Specific ML service data
 backend/src/ml/data/*.json filter=lfs diff=lfs merge=lfs -text
 ml_service/data/*.pkl filter=lfs diff=lfs merge=lfs -text
 ml_service/data/*.json filter=lfs diff=lfs merge=lfs -text
-
 # Training logs and large outputs
 *.log filter=lfs diff=lfs merge=lfs -text linguist-generated=true
-
 # -----------------------------------------------------------------------------
 # 🎯 PROJECT-SPECIFIC FILES
 # -----------------------------------------------------------------------------
@@ -192,17 +165,14 @@ ml_service/data/*.json filter=lfs diff=lfs merge=lfs -text
 package-lock.json linguist-generated=true
 yarn.lock linguist-generated=true
 poetry.lock linguist-generated=true
-
 # Build outputs (mark as generated)
 dist/** linguist-generated=true
 build/** linguist-generated=true
 out/** linguist-generated=true
 coverage/** linguist-generated=true
-
 # TypeScript compiled output
 *.js.map linguist-generated=true
 *.d.ts linguist-generated=true
-
 # -----------------------------------------------------------------------------
 # 📊 LANGUAGE STATISTICS CUSTOMIZATION
 # -----------------------------------------------------------------------------
@@ -212,27 +182,23 @@ coverage/** linguist-generated=true
 *.py linguist-detectable=true
 *.js linguist-detectable=true
 *.jsx linguist-detectable=true
-
 # Exclude these from language statistics
 *.md linguist-documentation=true
 *.txt linguist-documentation=true
 docs/** linguist-documentation=true
 examples/** linguist-documentation=true
-
 # Mark as generated (exclude from stats)
 dist/** linguist-generated=true
 build/** linguist-generated=true
 node_modules/** linguist-vendored=true
 *.min.js linguist-generated=true
 *.min.css linguist-generated=true
-
 # Mark test files appropriately
 *.test.* linguist-detectable=true
 *.spec.* linguist-detectable=true
 test/** linguist-detectable=true
 tests/** linguist-detectable=true
 __tests__/** linguist-detectable=true
-
 # -----------------------------------------------------------------------------
 # 🔀 MERGE STRATEGIES
 # -----------------------------------------------------------------------------
@@ -240,11 +206,9 @@ __tests__/** linguist-detectable=true
 CHANGELOG* merge=union
 HISTORY* merge=union
 NEWS* merge=union
-
 # Use ours strategy for generated files (keep our version)
 package-lock.json merge=ours
 yarn.lock merge=ours
-
 # -----------------------------------------------------------------------------
 # 🎨 DIFF CUSTOMIZATION
 # -----------------------------------------------------------------------------
@@ -253,11 +217,9 @@ yarn.lock merge=ours
 *.md diff=markdown
 *.html diff=html
 *.css diff=css
-
 # Use textconv for binary files that have text content
 *.pdf diff=pdf
 *.docx diff=docx
-
 # -----------------------------------------------------------------------------
 # 🔍 EXPORT/ARCHIVE SETTINGS
 # -----------------------------------------------------------------------------
@@ -270,7 +232,20 @@ test/ export-ignore
 tests/ export-ignore
 docs/ export-ignore
 examples/ export-ignore
-
 # -----------------------------------------------------------------------------
 # 🎯 END OF ENHANCED .GITATTRIBUTES
 # -----------------------------------------------------------------------------
+# Enhanced ML file LFS configuration
+# Large model files and datasets
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.ckpt filter=lfs diff=lfs merge=lfs -text
+*.h5 filter=lfs diff=lfs merge=lfs -text
+*.pb filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.pickle filter=lfs diff=lfs merge=lfs -text
+# Large datasets
+models/datasets/** filter=lfs diff=lfs merge=lfs -text
+*.parquet filter=lfs diff=lfs merge=lfs -text
+*.hdf5 filter=lfs diff=lfs merge=lfs -text
