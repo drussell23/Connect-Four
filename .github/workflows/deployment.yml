@@ -269,7 +269,7 @@ jobs:
           EOF
 
       - name: Build and push backend image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./backend/Dockerfile
@@ -405,7 +405,7 @@ jobs:
           EOF
 
       - name: Build and push frontend image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./frontend/Dockerfile
@@ -508,7 +508,7 @@ jobs:
           EOF
 
       - name: Build and push ML service image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
           file: ./ml_service/Dockerfile
