@@ -20,6 +20,6 @@ matplotlib==3.8.2
 seaborn==0.13.0
 tensorboard==2.15.1
 redis==5.0.1
-celery==5.3.4
+celery==5.5.3
 httpx==0.25.2
 python-multipart==0.0.6
