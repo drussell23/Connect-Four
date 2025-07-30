@@ -6,7 +6,7 @@ numpy==1.24.3
 torch==2.1.0
 tensorflow==2.15.0
 jax==0.4.20
-optax==0.1.7
+optax==0.2.4
 onnx==1.15.0
 onnxruntime==1.16.3
 scikit-learn==1.3.2
