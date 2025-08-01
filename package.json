@@ -146,7 +146,7 @@
     "legacy:ml": "./scripts/ml/ml-manager.sh"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
+    "@types/node": "^24.1.0",
     "axios": "^1.10.0",
     "typescript": "^4.9.0"
   },
